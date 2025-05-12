@@ -1,3 +1,4 @@
+//app/(logged-in)/layout.tsx
 import UpgradeRequired from "@/components/common/upgrade-required";
 import { getSubscriptionStatus, hasActivePlan } from "@/lib/user";
 import { currentUser } from "@clerk/nextjs/server";
@@ -10,8 +11,7 @@ export default async function LoggedInLayout({ children }: { children: React.Rea
     }
 
     const hasActiveSubscription = await hasActivePlan(user.emailAddresses[0].emailAddress);
-    //todo: remove this
-    if(hasActiveSubscription){
+    if(!hasActiveSubscription){
         return <UpgradeRequired />
     }
     return <>{children}</>;
