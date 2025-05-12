@@ -3,43 +3,44 @@ import { SummaryViewer } from '@/components/summaries/summary-viewer';
 import { MotionDiv, MotionH3 } from '../common/motion-wrapper';
 
 const DEMO_SUMMARY = `# Quick Overview
-• 🎯 Comprehensive Next.js 15 course covering everything from fundamentals to advanced deployment strategies.
+• 🧘 A practical guide to cultivating mindfulness and mental clarity through simple daily habits and awareness techniques.
 
 # Document Details
-• 📑 Type: Technical Course
-• 👥 For: Web Developers & React Engineers
+• 📑 Type: Self-Development Guide
+• 👥 For: Anyone seeking calm, focus, and inner peace
 
 # Key Highlights
-• 🚀 Complete guide to Next.js 15's App Router
-• ⭐ Server Components & Server Actions deep dive
-• 💫 Full-stack application development with Next.js
+• 🌿 Step-by-step introduction to mindfulness practices
+• 🧠 Understanding how thoughts shape our mood
+• ⏳ Techniques to pause, reflect, and reset your mind
 
 # Why It Matters
-• 💡 Next.js is becoming the industry standard for React applications, offering superior performance, SEO, and developer experience. This course provides the essential knowledge needed to build modern web applications.
+• 💡 In an age of constant distraction and pressure, learning to be present improves mental well-being, reduces stress, and enhances life satisfaction.
 
 # 📄 Main Points
-• 🎨 Modern application architecture with App Router
-• 💻 Server and Client Components best practices
-• 🔄 Data fetching patterns and caching strategies
-• 🛠️ Authentication and API route implementation
-• 📱 Responsive design and component libraries
+• 🛑 How to observe thoughts without reacting
+• 💬 Mindful communication and active listening
+• 🌅 Morning rituals to start the day grounded
+• 💤 Nighttime reflection for peaceful sleep
+• 📓 Journaling prompts for emotional awareness
 
 # Pro Tips
-• ⭐ Always consider server components as your default choice
-• 💎 Implement route groups for better code organization
-• 🌟 Use loading.tsx and error.tsx for better UX
+• ⏲️ Try 2-minute breathing pauses during busy days
+• 📵 Keep your phone out of sight during meals
+• ☀️ Step outside each day—even for a few mindful breaths
+• 📚 Track moods weekly to identify stress patterns
 
 # Key Terms to Know
-• 📚 Server Components: React components that render on the server for better performance
-• 🔍 Route Groups: Next.js feature for organizing routes without affecting URL structure
-• 🎯 Streaming: Technique for progressively rendering UI components
-• 🔄 Suspense: React feature for handling loading states
+• 🧘 Mindfulness: The art of being fully present in the moment
+• 🔁 Rumination: Repetitive, often negative thinking loops
+• 💨 Box Breathing: A simple technique to calm the nervous system
+• 🎯 Intention Setting: Defining how you want to feel and act each day
 
 # Bottom Line
-• 💫 Master Next.js 15 to build fast, scalable, and SEO-friendly web applications with the latest React features and best practices.
+• 🌟 Mindfulness is a life skill that empowers you to respond—not react—to life’s challenges, with calm and clarity.
 
 # 🔥 Final Thoughts
-This course transforms developers into Next.js experts, enabling them to build production-ready applications with confidence and efficiency.`;
+This guide makes mindfulness approachable and sustainable, giving you the tools to build a calmer, more focused, and fulfilling daily life.`;
 
 export default function DemoSection() {
   return (
@@ -68,9 +69,9 @@ export default function DemoSection() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="font-bold text-3xl max-w-2xl mx-auto px-4 sm:px-6"
             >
-              Watch how Sommaire transforms{' '}
+              Watch how Sommaire transforms this{' '}
               <span className="bg-linear-to-r from-rose-500 to-rose-700 bg-clip-text text-transparent">
-                this Next.js course PDF
+                Mindful Living PDF
               </span>{' '}
               into an easy-to-read summary!
             </MotionH3>
