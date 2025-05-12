@@ -1,3 +1,4 @@
+//lib/payments.ts
 import Stripe from 'stripe';
 import { getDbConnection } from './db';
 

@@ -1,3 +1,6 @@
+//components/home/pricing-section.tsx
+'use client';
+
 import { cn } from '@/lib/utils';
 import {
   containerVariants,
@@ -7,6 +10,9 @@ import {
 import { ArrowRight, CheckIcon } from 'lucide-react';
 import Link from 'next/link';
 import { MotionDiv, MotionSection } from '../common/motion-wrapper';
+import { useRouter } from 'next/navigation';
+import { useAuth } from '@clerk/nextjs';
+import React from 'react';
 
 type PriceType = {
   name: string;
@@ -35,6 +41,29 @@ const PricingCard = ({
   id,
   paymentLink,
 }: PriceType) => {
+  const { isSignedIn } = useAuth();
+  const router = useRouter();
+
+  // Check for stored payment link on component mount and redirect if user is signed in
+  React.useEffect(() => {
+    const storedPaymentLink = localStorage.getItem('pendingPaymentLink');
+    if (storedPaymentLink && isSignedIn) {
+      // Remove from localStorage before redirecting
+      localStorage.removeItem('pendingPaymentLink');
+      router.push(storedPaymentLink);
+    }
+  }, [isSignedIn, router]);
+
+  const handleBuyNow = () => {
+    if (!isSignedIn) {
+      // Store the payment link in localStorage before redirecting to sign-in
+      localStorage.setItem('pendingPaymentLink', paymentLink);
+      router.push('/sign-in');
+    } else {
+      router.push(paymentLink);
+    }
+  };
+
   return (
     <MotionDiv
       variants={listVariant}
@@ -80,17 +109,15 @@ const PricingCard = ({
           variants={listVariant}
           className="space-y-2 flex justify-center w-full"
         >
-          <Link
-            href={paymentLink}
+          <button
+            onClick={handleBuyNow}
             className={cn(
               'w-full rounded-full flex items-center justify-center gap-2 bg-linear-to-r from-rose-800 to-rose-500 hover:from-rose-500 hover:to-rose-800 text-white border-2 py-2',
-              id === 'pro'
-                ? 'border-rose-900'
-                : 'border-rose-100 from-rose-400 to-rose-500'
+              id === 'pro' ? 'border-rose-900' : 'border-rose-100 from-rose-400 to-rose-500'
             )}
           >
             Buy Now <ArrowRight size={18} />
-          </Link>
+          </button>
         </MotionDiv>
       </div>
     </MotionDiv>

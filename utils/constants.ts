@@ -1,3 +1,4 @@
+//utils/constants.ts
 import { isDev } from "@/utils/helpers";
 
 export const pricingPlans = [

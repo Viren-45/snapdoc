@@ -1,3 +1,4 @@
+//app/api/payments/route.ts
 import {
     handleCheckoutSessionCompleted,
     handleSubscriptionDeleted,
