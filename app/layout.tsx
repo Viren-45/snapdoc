@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/common/header";
 import { ClerkProvider } from "@clerk/nextjs";
 import { Toaster } from '@/components/ui/toaster';
+import { ORIGIN_URL } from "@/utils/helpers";
 // import Footer from "@/components/common/footer";
 
 const fontSans = FontSans({
@@ -15,6 +16,17 @@ const fontSans = FontSans({
 export const metadata: Metadata = {
   title: "SnapDoc - AI-Powered PDF Summarization",
   description: "Save hours of reading time. Transform lengthy PDFs into clear, accurate summarizes in seconds with our advanced AI technology.",
+  openGraph: {
+    images: [
+      {
+        url: '/Images/opengraph-image.png',
+      },
+    ],
+  },
+  metadataBase: new URL(ORIGIN_URL),
+  alternates: {
+    canonical: ORIGIN_URL
+  }
 };
 
 export default function RootLayout({
