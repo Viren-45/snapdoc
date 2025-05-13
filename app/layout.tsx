@@ -16,6 +16,9 @@ const fontSans = FontSans({
 export const metadata: Metadata = {
   title: "SnapDoc - AI-Powered PDF Summarization",
   description: "Save hours of reading time. Transform lengthy PDFs into clear, accurate summarizes in seconds with our advanced AI technology.",
+  icons: {
+    icon: '/favicon.ico',
+  },
   openGraph: {
     images: [
       {

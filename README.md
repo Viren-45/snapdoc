@@ -2,6 +2,8 @@
 
 Built with Next.js 15 App Router, Clerk for Auth, React, OpenAI GPT-4, Langchain, ShadcN UI components, Tailwind CSS 4, NeonDB, UploadThing, Stripe for payments, TypeScript, TailwindCSS and more.
 
+![Project Image](https://snapdoc-ai.vercel.app/Images/opengraph-image.png)
+
 ## ⚡ Features
 
 ### 🛠️ Core Technologies:
