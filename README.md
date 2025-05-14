@@ -1,4 +1,4 @@
-# Sommaire - Transform PDFs into a beautiful reel of impactful summaries with the power of AI!
+# SnapDoc - Transform PDFs into a beautiful reel of impactful summaries with the power of AI!
 
 Built with Next.js 15 App Router, Clerk for Auth, React, OpenAI GPT-4, Langchain, ShadcN UI components, Tailwind CSS 4, NeonDB, UploadThing, Stripe for payments, TypeScript, TailwindCSS and more.
 
